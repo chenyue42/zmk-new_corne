@@ -21,7 +21,7 @@ layers:
   - F
   - G
   - Ctl+Alt+Gui+$$mdi:arrow-left-bold$$
-  - Gui+Sft+F
+  - Gui+Ctl+F
   - Ctl+Alt+Gui+$$mdi:arrow-right-bold$$
   - H
   - J
