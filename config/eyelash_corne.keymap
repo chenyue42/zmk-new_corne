@@ -71,10 +71,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E  &kp R             &kp T                                            &kp LC(LA(UP_ARROW))                       &kp Y      &kp U          &kp I      &kp O    &kp P     &kp ESC
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F             &kp G                    &kp LC(LA(LEFT_ARROW))  &none                   &kp LC(LA(RIGHT))  &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V             &kp B      &kp C_MUTE                            &kp LC(LA(DOWN_ARROW))                     &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
-                                &mo 1  &kp LEFT_COMMAND  &kp ENTER                                                                                   &kp SPACE  &kp BACKSPACE  &mo 2
+&kp TAB           &kp Q  &kp W  &kp E  &kp R             &kp T                                                &kp LC(LA(UP_ARROW))                                 &kp Y      &kp U          &kp I      &kp O    &kp P     &kp ESC
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D  &kp F             &kp G                    &kp LC(LA(LG(LEFT_ARROW)))  &kp LG(LS(F))           &kp LC(LA(LG(RIGHT_ARROW)))  &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C  &kp V             &kp B      &kp C_MUTE                                &kp LC(LA(DOWN_ARROW))                               &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_ALT
+                                &mo 1  &kp LEFT_COMMAND  &kp ENTER                                                                                                 &kp SPACE  &kp BACKSPACE  &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -83,13 +83,13 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                            &mmv MOVE_UP                     &kp CARET       &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&trans  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE
-&trans  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none                    &mmv MOVE_DOWN                   &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
-                                       &trans        &trans        &trans                                                                  &trans          &trans         &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                                    &kp LC(RA(UP_ARROW))                       &kp CARET       &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&trans  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5           &kp LC(RA(LEFT_ARROW))  &none                   &kp LC(RA(RIGHT))  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE
+&trans  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none                            &kp LC(RA(DOWN_ARROW))                     &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
+                                       &trans        &trans        &trans                                                                                    &trans          &trans         &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
+            sensor-bindings = <&inc_dec_kp LG(PLUS) LG(UNDERSCORE)>;
         };
 
         raise_layer {
@@ -107,10 +107,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &bt BT_CLR  &bootloader  &sys_reset                &none                     &none                                          &mmv MOVE_UP                     &none   &none   &none   &none  &none  &none
-&trans  &bt BT_NXT  &none        &kp LS(LG(LC(NUMBER_3)))  &kp LG(LS(LC(NUMBER_4)))  &none                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none   &none   &none   &none  &none  &none
-&trans  &none       &none        &kp LG(LS(NUMBER_3))      &kp LG(LS(NUMBER_4))      &kp LG(LS(NUMBER_5))  &none                    &mmv MOVE_DOWN                   &none   &none   &none   &none  &none  &none
-                                 &trans                    &trans                    &trans                                                                          &trans  &trans  &trans
+&trans  &bt BT_CLR  &bootloader  &sys_reset                &none                     &none                                 &none         &none   &none   &none   &none  &none  &none
+&trans  &bt BT_NXT  &none        &kp LS(LG(LC(NUMBER_3)))  &kp LG(LS(LC(NUMBER_4)))  &none                          &none  &none  &none  &none   &none   &none   &none  &none  &none
+&trans  &none       &none        &kp LG(LS(NUMBER_3))      &kp LG(LS(NUMBER_4))      &kp LG(LS(NUMBER_5))  &none           &none         &none   &none   &none   &none  &none  &none
+                                 &trans                    &trans                    &trans                                              &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
