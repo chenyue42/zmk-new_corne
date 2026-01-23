@@ -84,7 +84,7 @@
             display-name = "NUMBER";
             bindings = <
 &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                                    &kp LC(RA(UP_ARROW))                       &kp CARET       &kp AMPERSAND  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&trans  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5           &kp LC(RA(LEFT_ARROW))  &kp RA(R)               &kp LC(RA(RIGHT))  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE
+&trans  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5           &kp LC(RA(LEFT_ARROW))  &kp RA(LC(R))           &kp LC(RA(RIGHT))  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE
 &trans  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none                            &kp LC(RA(DOWN_ARROW))                     &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
                                        &trans        &trans        &trans                                                                                    &trans          &trans         &trans
             >;
@@ -114,6 +114,15 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 };
